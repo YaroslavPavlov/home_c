@@ -2,19 +2,23 @@
 
 #include <stdio.h>
 
-void printBin(int n) 
+void print_2num (int num)
 {
-	if (n > 0)
-       //return;
-       printBin(n / 2);
-       printf("%d", n % 2);    	
+    if (num>0)
+    {
+        print_2num (num/2);
+        printf ("%d", num%2);
+    }
 }
- 
+
 int main()
 {
-int n;
-    scanf("%d", &n);
-    printBin(n);
+    int num;
+    scanf ("%d", &num);
+    if (num >0)
+        print_2num (num);
+    else
+        printf ("%d ", 0/num);
     return 0;
 }
 
